@@ -27,3 +27,18 @@ nnoremap <tab> >>
 vnoremap <tab> >> 
 vnoremap » >> 
 nnoremap » >> 
+
+inoremap <C-w>l <esc><C-w>l i
+inoremap <C-w>h <esc><C-w>h i
+
+inoremap <C-V> <C-S-v>
+" inoremap <C-S-v> <C-v>
+
+noremap <Up>    <Nop>
+noremap <Down>  <Nop>
+noremap <Left>  <Nop>
+noremap <Right> <Nop>
+
+autocmd FileType python noremap ! :.s/^/#/<Enter> 
+
+autocmd FileType cpp noremap # :.s/^/\/\//<Enter> 
