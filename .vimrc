@@ -39,6 +39,6 @@ noremap <Down>  <Nop>
 noremap <Left>  <Nop>
 noremap <Right> <Nop>
 
-autocmd FileType python noremap ! :.s/^/#/<Enter> 
+" autocmd FileType python noremap ! :.s/^/#/<Enter> 
 
 autocmd FileType cpp noremap # :.s/^/\/\//<Enter> 
