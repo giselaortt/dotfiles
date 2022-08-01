@@ -34,10 +34,10 @@ inoremap <C-w>h <esc><C-w>h i
 inoremap <C-V> <C-S-v>
 " inoremap <C-S-v> <C-v>
 
-noremap <Up>    <Nop>
-noremap <Down>  <Nop>
-noremap <Left>  <Nop>
-noremap <Right> <Nop>
+" noremap <Up>    <Nop>
+" noremap <Down>  <Nop>
+" noremap <Left>  <Nop>
+" noremap <Right> <Nop>
 
 " autocmd FileType python noremap ! :.s/^/#/<Enter> 
 
