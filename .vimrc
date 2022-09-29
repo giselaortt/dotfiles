@@ -5,9 +5,6 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
@@ -18,7 +15,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'morhetz/gruvbox' 
 Plugin 'tmhedberg/SimpylFold'
-"Bundle 'Valloric/YouCompleteMe'
+Bundle 'Valloric/YouCompleteMe'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 " All of your Plugins must be added before the following line
@@ -80,19 +77,15 @@ au Filetype python
 
 set encoding=utf-8
 
-"let g:ycm_autoclose_preview_window_after_completion=1
-"map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
-"if has('gui_running')
-"  set background=dark
-"  colorscheme solarized
-"else
-"  colorscheme zenburn
-"endif
-"call togglebg#map("<F5>")
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
 
 " Start NERDTree and put the cursor back in the other window.
 autocmd VimEnter * NERDTree | wincmd p
+
+
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
