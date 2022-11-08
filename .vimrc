@@ -53,7 +53,7 @@ nnoremap <C-H> <C-W><C-H>
 set foldmethod=indent
 set foldlevel=99
 " Enable folding with the spacebar
-nnoremap <space> za
+"nnoremap <space> za
 nnoremap <tab> >>
 vnoremap <tab> >> 
 inoremap <C-w>l <esc><C-w>l i
@@ -83,10 +83,15 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
 " Start NERDTree and put the cursor back in the other window.
-autocmd VimEnter * NERDTree | wincmd p
+"B
+"autocmd VimEnter * NERDTree | wincmd p
 
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
+"highlights all search results
+set hlsearch
 
+"turns highlights off by pressing n
+nnoremap n :noh<return><esc>
